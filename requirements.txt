@@ -1,0 +1,17 @@
+langchain
+google-generativeai
+PyPDF2
+langchain-community
+huggingface
+transformers
+langchain-google-genai
+pypdf
+# faiss-cpu
+langchain-pinecone
+langchain-unstructured
+unstructured
+
+fastapi
+Pillow
+python-dotenv
+uvicorn

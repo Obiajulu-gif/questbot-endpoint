@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+__init__.py
+
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+.env/
+.virtualenv/
+
+
+
+# Environment variables
+.env
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.bak
+
+# Logs
+*.log
+
+# Cache directories
+**/__pycache__/
+.pytest_cache/
+
+# Testing
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Documentation
+_build/
+_static/
+_templates/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
