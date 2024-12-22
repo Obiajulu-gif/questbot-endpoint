@@ -58,7 +58,7 @@ app.add_middleware(
 
 # Predefined document paths
 PDF_PATHS = [
-    r"C:\Users\Okeoma\Downloads\whitepaper_Prompt Engineering_v4.pdf",
+   # r"C:\Users\Okeoma\Downloads\whitepaper_Prompt Engineering_v4.pdf",
 ]
 
 URLS = [
