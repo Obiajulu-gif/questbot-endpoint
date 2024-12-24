@@ -32,3 +32,7 @@ class QueryRequest(BaseModel):
 
 class AnswerRequestRiddle(BaseModel):
     user_answer: str
+
+class FunFactResponse(BaseModel):
+    success: bool
+    facts: str
