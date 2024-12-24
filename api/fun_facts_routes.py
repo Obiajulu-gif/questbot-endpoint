@@ -49,7 +49,7 @@ app.add_middleware(
 )
 
 # Load environment variables
-load_dotenv()
+# load_dotenv()
 
 # Initialize fun facts generator
 fun_facts_generator = BNBFunFacts()
