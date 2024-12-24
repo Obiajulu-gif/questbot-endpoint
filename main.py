@@ -28,6 +28,11 @@ from api.rag_routes import (
     health_check
 )
 
+from api.fun_facts_routes import (
+    get_random_fact
+)
+
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -70,6 +75,11 @@ app.post("/riddle/reset")(reset_riddle)
 app.post("/rag/query")(process_query)
 app.get("/rag/health")(health_check)
 
+# Fun facts route
+app.get("/fun-fact")(get_random_fact)
+
+
+
 # Add a combined health check endpoint
 @app.get("/health")
 async def combined_health_check():
@@ -83,7 +93,8 @@ async def combined_health_check():
             "components": {
                 "rag": rag_health,
                 "quiz": "active" if quiz_game is not None else "inactive",
-                "riddle": "active" if riddle_game is not None else "inactive"
+                "riddle": "active" if riddle_game is not None else "inactive",
+                'fun_facts': 'active' if get_random_fact is not None else 'inactive'
             }
         }
     except Exception as e:
