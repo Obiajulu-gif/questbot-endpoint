@@ -11,6 +11,7 @@ langchain-pinecone
 langchain-unstructured
 unstructured
 markdownify
+python-multipart
 
 fastapi
 Pillow
