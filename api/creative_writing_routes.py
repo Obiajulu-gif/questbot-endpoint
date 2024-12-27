@@ -68,7 +68,7 @@ def cleanup_expired_challenges():
     current_time = datetime.now()
     expired_ids = [
         challenge_id for challenge_id, challenge in challenges.items()
-        if current_time > challenge.end_time + timedelta(minutes==1)  # Keep for 1 minutes after expiry
+        if current_time > challenge.end_time + timedelta(minutes=1)  # Keep for 1 minutes after expiry
     ]
     for challenge_id in expired_ids:
         del challenges[challenge_id]
