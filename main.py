@@ -32,6 +32,13 @@ from api.fun_facts_routes import (
     get_random_fact
 )
 
+from api.creative_writing_routes import (
+    create_challenge,
+    evaluate_challenge,
+    get_challenge_scores,
+    get_challenge_status
+)
+
 
 # Configure logging
 logging.basicConfig(
@@ -78,7 +85,11 @@ app.get("/rag/health")(health_check)
 # Fun facts route
 app.get("/fun-fact")(get_random_fact)
 
-
+# Creative writing routes
+app.post("/prompt")(create_challenge)
+app.post("/evaluate/{challenge_id}")(evaluate_challenge)
+app.get("/scores/{challenge_id}")(get_challenge_scores)
+app.get("/challenge/{challenge_id}")(get_challenge_status)
 
 # Add a combined health check endpoint
 @app.get("/health")
@@ -94,7 +105,8 @@ async def combined_health_check():
                 "rag": rag_health,
                 "quiz": "active" if quiz_game is not None else "inactive",
                 "riddle": "active" if riddle_game is not None else "inactive",
-                'fun_facts': 'active' if get_random_fact is not None else 'inactive'
+                'fun_facts': 'active' if get_random_fact is not None else 'inactive',
+                'creative_writing': 'active' if create_challenge is not None else 'inactive'
             }
         }
     except Exception as e:
